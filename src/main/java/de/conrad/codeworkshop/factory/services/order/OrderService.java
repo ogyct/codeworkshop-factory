@@ -1,6 +1,6 @@
 package de.conrad.codeworkshop.factory.services.order;
 
-import de.conrad.codeworkshop.factory.services.factory.Controller;
+import de.conrad.codeworkshop.factory.services.factory.FactoryController;
 import de.conrad.codeworkshop.factory.services.order.api.Order;
 import de.conrad.codeworkshop.factory.services.order.api.OrderConfirmation;
 import de.conrad.codeworkshop.factory.services.order.api.OrderNumber;
@@ -17,12 +17,12 @@ import static de.conrad.codeworkshop.factory.services.order.api.OrderStatus.ACCE
  * @author Andreas Hartmann
  */
 @org.springframework.stereotype.Service("orderService")
-public class Service {
+public class OrderService {
 
-    private final Controller factoryController;
+    private final FactoryController factoryController;
 
     @Autowired
-    public Service(de.conrad.codeworkshop.factory.services.factory.Controller factoryController) {
+    public OrderService(FactoryController factoryController) {
         this.factoryController = factoryController;
     }
 

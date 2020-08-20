@@ -4,7 +4,6 @@ import org.springframework.lang.Nullable;
 
 import javax.validation.constraints.NotNull;
 
-import static de.conrad.codeworkshop.factory.services.order.api.OrderNumber.*;
 import static de.conrad.codeworkshop.factory.services.order.api.OrderStatus.ACCEPTED;
 import static de.conrad.codeworkshop.factory.services.order.api.OrderStatus.DECLINED;
 
@@ -19,8 +18,7 @@ public class OrderConfirmation {
     private OrderNumber orderNumber;
 
     public OrderConfirmation(final OrderNumber orderNumber) {
-        this.orderNumber = generate();
-
+        this.orderNumber = orderNumber;
         this.status = null == orderNumber ? DECLINED : ACCEPTED;
     }
 

@@ -13,15 +13,14 @@ import static org.springframework.http.HttpStatus.OK;
 /**
  * @author Andreas Hartmann
  */
-@RestController("factoryController")
+@RestController
 @RequestMapping("/factory")
-public class Controller {
+public class FactoryController {
 
-    private final Service factoryService;
+    private final FactoryService factoryService;
 
     @Autowired
-    public Controller(final Service factoryService) {
-
+    public FactoryController(FactoryService factoryService) {
         this.factoryService = factoryService;
     }
 
